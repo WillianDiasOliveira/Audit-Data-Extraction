@@ -1,0 +1,16 @@
+Database.Connect ConnectionString: $fx'Driver={SQLite3 ODBC Driver};Database=C:\...\Banco_auditoria.db;' Connection=> SQLConnection
+Database.ExecuteSqlStatement.Execute Connection: $fx'=SQLConnection' Statement: $fx'SELECT * FROM Auditoria
+WHERE Status = \'Pendente\'' Timeout: $fx'=30' Result=> QueryResult
+LOOP FOREACH CurrentItem IN $fx'=QueryResult'
+    Web.InvokeWebService.InvokeWebService Url: $fx'="https://brasilapi.com.br/api/cnpj/v1/" & CurrentItem.CNPJ' Method: Web.Method.Get Accept: $fx'application/json' ContentType: $fx'application/xml' ConnectionTimeout: $fx'=90' FollowRedirection: True ClearCookies: False FailOnErrorStatus: False EncodeRequestBody: True UserAgent: $fx'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.21) Gecko/20100312 Firefox/3.6' Encoding: Web.Encoding.AutoDetect AcceptUntrustedCertificates: False TrimRequestBody: True ResponseHeaders=> WebServiceResponseHeaders Response=> WebServiceResponse StatusCode=> StatusCode
+    IF $fx'=StatusCode = 200' THEN
+        Variables.ConvertJsonToCustomObject Json: $fx'${WebServiceResponse}' CustomObject=> JsonAsCustomObject
+        Text.Replace.ReplaceText Text: $fx'=JsonAsCustomObject.razao_social' TextToFind: $fx'\'' IgnoreCase: False ReplaceWith: $fx'\'\'' ActivateEscapeSequences: False ComparisonType: Text.TextComparisonType.CultureSensitive Result=> RazaoSocial_Limpa
+        SET CnpjAtual TO $fx'=CurrentItem.CNPJ'
+        Database.ExecuteSqlStatement.Execute Connection: $fx'=SQLConnection' Statement: $fx'="UPDATE Auditoria SET Status = \'Concluido\', Razao_Social = \'" & RazaoSocial_Limpa & "\', Situacao_Receita = \'" & JsonAsCustomObject.descricao_situacao_cadastral & "\' WHERE CNPJ = \'" & CnpjAtual & "\';"
+
+' Timeout: $fx'=50' Result=> QueryResult
+    END
+    WAIT $fx'=0.5'
+END
+Database.Close Connection: $fx'=SQLConnection'
