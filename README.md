@@ -42,8 +42,17 @@ O fluxo combina a facilidade de orquestração do **Power Automate Desktop (Powe
 
 1.  Clone este repositório em sua máquina.
 2.  Certifique-se de possuir o **Power Automate Desktop** com suporte a fluxos Power Fx ativado.
-3.  Insira o arquivo do banco de dados `banco_auditoria.db` no diretório configurado.
-4.  Execute o fluxo através do console do Power Automate.
+3.  Entre no arquivo RPA Audit.txt, copie o que esta dentro.
+4.  Abra o Power Automate, crie um novo fluxo, certifique-se o "Power Fx" ativado e cole o codigo que estava no RPA Audit.txt.
+6.  altera o código "C:\Banco_auditoria.db" para o diretório certo do arquivo `Banco_auditoria.db`.
+7.  Execute o fluxo através do console do Power Automate.
+
+## 🖼️ Prints
+
+<img width="1473" height="820" alt="image" src="https://github.com/user-attachments/assets/57a43749-c6e9-4de1-9800-0b16cf051087" />
+<img width="623" height="420" alt="image" src="https://github.com/user-attachments/assets/a369e6fb-226f-40d1-902e-a2dd98589284" />
+
+
 
 *Nota técnica para auditoria visual:* Para monitorar a execução em tempo real pelo software DB Browser for SQLite sem bloquear os comandos de gravação do robô, abra o arquivo utilizando o modo **"Open Database Read Only..."** (Somente Leitura) e utilize a tecla `F5` para atualizar a tabela dinamicamente.
 
