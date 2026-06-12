@@ -1,7 +1,8 @@
 # RPA Audit Data Extraction: Power Automate + Python + SQLite
 
-[![Microsoft Learn](https://img.shields.io/badge/Microsoft%20Learn-Estudos%20RPA-blue?style=flat-square&logo=microsoft)](https://learn.microsoft.com/pt-br/users/williandiasdeoliveira-5456/)
-[![Portfolio](https://img.shields.io/badge/Portf%C3%B3lio-Acessar-green?style=flat-square)](https://willian-dias-oliveira.vercel.app/)
+[![Microsoft Learn](https://img.shields.io/badge/Microsoft%20Learn-Estudos%20RPA-green?style=flat-square&logo=microsoft)](https://learn.microsoft.com/pt-br/users/williandiasdeoliveira-5456/)
+[![Portfolio](https://img.shields.io/badge/Portf%C3%B3lio-Acessar-blue?style=flat-square)](https://willian-dias-oliveira.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/willian-dias-oliveira/)
 
 Este projeto é uma solução completa de automação de processos robóticos (RPA) desenvolvida de ponta a ponta. O robô gerencia uma fila de auditoria complexa com 200 CNPJs, realiza o enriquecimento de dados via consumo de API e atualiza os registros de forma segura diretamente em um banco de dados local.
 
@@ -64,4 +65,4 @@ Este projeto faz parte do meu portfólio de estudos contínuos focado em Engenha
 
 * 💻 **Meu Portfólio Web:** [willian-dias-oliveira.vercel.app](https://willian-dias-oliveira.vercel.app/)
 * 📚 **Perfil Oficial de Estudos no Microsoft Learn:** [Acessar Trilha de Aprendizado](https://learn.microsoft.com/pt-br/users/williandiasdeoliveira-5456/)
-* 💼 **Conecte-se comigo no LinkedIn:** https://www.linkedin.com/in/willian-dias-oliveira/
+* 💼 **Conecte-se comigo no LinkedIn:** [https://www.linkedin.com/in/willian-dias-oliveira/](https://www.linkedin.com/in/willian-dias-oliveira/)
