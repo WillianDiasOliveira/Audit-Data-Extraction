@@ -41,12 +41,12 @@ O fluxo combina a facilidade de orquestração do **Power Automate Desktop (Powe
 
 ## 🚀 Como Executar o Projeto
 
-1.  Clone este repositório em sua máquina.
-2.  Certifique-se de possuir o **Power Automate Desktop** com suporte a fluxos Power Fx ativado.
-3.  Entre no arquivo RPA Audit.txt, copie o que esta dentro.
-4.  Abra o Power Automate, crie um novo fluxo, certifique-se o "Power Fx" ativado e cole o codigo que estava no RPA Audit.txt.
-6.  altera o código "C:\Banco_auditoria.db" para o diretório certo do arquivo `Banco_auditoria.db`.
-7.  Execute o fluxo através do console do Power Automate.
+1. **Clone este repositório** em sua máquina.
+2. Certifique-se de possuir o **Power Automate Desktop** com suporte a fluxos **Power Fx** ativado.
+3. Abra o arquivo `RPA Audit.txt` e copie todo o seu conteúdo (`Ctrl + A` e `Ctrl + C`).
+4. Abra o Power Automate, crie um **novo fluxo** (certifique-se de que a opção "Power Fx" está ativada) e cole o código (`Ctrl + V`) na tela em branco. O fluxo será montado visualmente de forma automática.
+5. **Ajuste o Banco de Dados:** Na primeira ação do fluxo ("Abrir conexão SQL"), altere o diretório `C:\...\Banco_auditoria.db` para o caminho exato onde o arquivo `.db` foi salvo no seu computador.
+6. **Execute o fluxo** através do console do Power Automate.
 
 ## 🖼️ Prints
 
